@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { userSlice } from "./UserSlice";
+// import { userSlice } from "./UserSlice";
+import { clearAllUsers } from "../actions/index";
 
 export const adminSlice = createSlice({
   name: "admin",
@@ -11,13 +12,13 @@ export const adminSlice = createSlice({
     // },
   },
   extraReducers(builder) {
-    builder.addCase(userSlice.actions.clearAllUsers, () => {
+    builder.addCase(clearAllUsers, () => {
       console.log("In adminSlice extraReducers");
       return [];
     });
   },
 });
 
-export const { clearAllUsers } = adminSlice.actions;
+// export const {  } = adminSlice.actions;
 
 export default adminSlice.reducer;

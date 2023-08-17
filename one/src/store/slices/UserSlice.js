@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { clearAllUsers } from "../actions/index";
 
 export const userSlice = createSlice({
   name: "user",
@@ -15,26 +16,26 @@ export const userSlice = createSlice({
       console.log("In slice = ", action.payload);
       state.splice(action.payload, 1);
     },
-    clearAllUsers(state, action) {
-      console.log("In slice : clearAllUsers");
-      // DESC : Remove all elements from array
-      // return [];
-      // or
-      return (state = []);
-    },
+    // clearAllUsers(state, action) {
+    //   console.log("In slice : clearAllUsers");
+    //   // DESC : Remove all elements from array
+    //   // return [];
+    //   // or
+    //   return (state = []);
+    // },
   },
-  /** NOTE : extraReducers : 
+  /** NOTE : extraReducers :
    *  If we want to use common task done by multiple slices so create extraReducers
    *  for extraReducers work we must have microReducers
    */
   extraReducers(builder) {
-    builder.addCase(userSlice.actions.clearAllUsers, () => {
+    builder.addCase(clearAllUsers, () => {
       console.log("In Userslice extraReducers");
       return [];
     });
   },
 });
 
-export const { addUser, removeUser, clearAllUsers } = userSlice.actions;
+export const { addUser, removeUser } = userSlice.actions;
 
 export default userSlice.reducer;

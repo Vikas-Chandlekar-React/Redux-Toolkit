@@ -3,3 +3,4 @@
 2. ExtraReducer : 
     - Problem here, when we click on Clear User Button it will clear both array in UserSlice and AdminSlice 
     
+3. Above problem not solve and understand
