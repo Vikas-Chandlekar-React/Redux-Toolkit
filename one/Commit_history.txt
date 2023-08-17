@@ -1,1 +1,5 @@
 1. Initial Commit
+
+2. ExtraReducer : 
+    - Problem here, when we click on Clear User Button it will clear both array in UserSlice and AdminSlice 
+    

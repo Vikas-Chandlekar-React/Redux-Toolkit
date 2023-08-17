@@ -1,0 +1,8 @@
+1. npm i styled-components
+
+2. npm i @reduxjs/toolkit react-redux
+
+3. npm i react-icons
+
+4. npm i chance
+    - For fake data 
