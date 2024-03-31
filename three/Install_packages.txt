@@ -1,0 +1,7 @@
+1. Chakra UI 
+    - npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+    - More Details (https://chakra-ui.com/)
+
+2. Redux Toolkit 
+    - npm install @reduxjs/toolkit react-redux
+    - More Details (https://redux-toolkit.js.org/)
